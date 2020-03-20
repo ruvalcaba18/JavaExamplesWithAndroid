@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/main_layout"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+
+    android:weightSum="4">
+
+
+    <LinearLayout
+
+        android:layout_width="347dp"
+
+        android:layout_height="302dp"
+
+        android:layout_weight="1"
+
+        android:gravity="center_horizontal"
+
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="347dp"
+            android:layout_height="272dp"
+            android:contentDescription="desc_firebase_lockup"
+
+            android:src="@drawable/portada2" />
+
+
+        <TextView
+
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="signed_out" />
+
+
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Firebase User ID: 123456789abc" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+
+            android:id="@+id/emailPasswordFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <EditText
+
+                android:id="@+id/fieldEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="escribe_tuEmail"
+                android:inputType="textEmailAddress" />
+
+
+            <EditText
+
+                android:id="@+id/fieldPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="escribe_tuPassword_ConMas_de6Digitos"
+                android:inputType="textPassword" />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/emailPasswordButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailPasswordFields"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="16dp">
+
+
+            <Button
+
+                android:id="@+id/emailSignInButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="sign_in" />
+
+
+            <Button
+
+                android:id="@+id/verifyEmailButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailSignInButton"
+                android:layout_weight="1.0"
+                android:onClick="verificacionDeLogin"
+                android:text="verify_email" />
+
+            <Button
+
+                android:id="@+id/emailCreateAccountButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="create_account" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
